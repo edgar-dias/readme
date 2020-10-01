@@ -13,16 +13,38 @@ Make sure you have installed all of the following prerequisites on your developm
 $ git clone https://gitlab.com/decode.repositorio/lucimar.git
 ```
 
-## Installation Steps
+## Deployment with Docker
 
-### 1. Navigate to the project folder
+Navigate to the project folder
 
 ```bash
 $ cd lucimar
 ```
 
-### 2. Run Docker Compose
+* Deployment with compose:
 
 ```bash
-$  docker-compose up
+$ docker-compose up
+```
+
+* Deployment with just Docker:
+
+```bash
+$ docker network create lucimar-network
+```
+
+```bash
+docker image build -t lucimar-db ./db
+```
+
+```bash
+docker image build -t lucimar-app ./app
+```
+
+```bash
+docker container run --name lucimar-db --network lucimar-network -d lucimar-db
+```
+
+```bash
+docker container run --name lucimar-app --network lucimar-network  -p 8080:8080 -d lucimar-app
 ```

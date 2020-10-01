@@ -53,4 +53,4 @@ $ docker container run --name lucimar-app --network lucimar-network  -p 8080:808
 ## Credits
 
 
-[![Decode](https://www.decode.pt/assets/Header/logo_decode_red.svg)(https://www.decode.pt)]
+[![Decode](https://www.decode.pt/assets/Header/logo_decode_red.svg)](https://www.decode.pt)

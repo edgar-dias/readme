@@ -21,7 +21,7 @@ Navigate to the project folder
 $ cd lucimar
 ```
 
-* Deployment with Compose:
+* Deployment with Docker Compose:
 
 ```bash
 $ docker-compose up
@@ -48,3 +48,8 @@ $ docker container run --name lucimar-db --network lucimar-network -d lucimar-db
 ```bash
 $ docker container run --name lucimar-app --network lucimar-network  -p 8080:8080 -d lucimar-app
 ```
+
+
+## Credits
+
+[Decode](https://www.decode.pt)

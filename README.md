@@ -38,19 +38,17 @@ $ docker image build -t lucimar-db ./db
 ```
 
 ```bash
-$ docker image build -t lucimar-app ./app
+$ docker container run --name lucimar-db --network lucimar-network -d lucimar-db
 ```
 
 ```bash
-$ docker container run --name lucimar-db --network lucimar-network -d lucimar-db
+$ docker image build -t lucimar-app ./app
 ```
 
 ```bash
 $ docker container run --name lucimar-app --network lucimar-network  -p 8080:8080 -d lucimar-app
 ```
 
-
 ## Credits
-
 
 [![Decode](https://www.decode.pt/assets/Header/logo_decode_red.svg)](https://www.decode.pt)

@@ -21,7 +21,7 @@ Navigate to the project folder
 $ cd lucimar
 ```
 
-* Deployment with compose:
+* Deployment with Compose:
 
 ```bash
 $ docker-compose up
@@ -34,17 +34,17 @@ $ docker network create lucimar-network
 ```
 
 ```bash
-docker image build -t lucimar-db ./db
+$ docker image build -t lucimar-db ./db
 ```
 
 ```bash
-docker image build -t lucimar-app ./app
+$ docker image build -t lucimar-app ./app
 ```
 
 ```bash
-docker container run --name lucimar-db --network lucimar-network -d lucimar-db
+$ docker container run --name lucimar-db --network lucimar-network -d lucimar-db
 ```
 
 ```bash
-docker container run --name lucimar-app --network lucimar-network  -p 8080:8080 -d lucimar-app
+$ docker container run --name lucimar-app --network lucimar-network  -p 8080:8080 -d lucimar-app
 ```
